@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    background-color: #0b0d12;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    letter-spacing: 0.005em;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Precision studio slider styling */
+input[type="range"].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].studio-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #232938;
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #0b0d12;
+  margin-top: -5px;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.45);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type="range"].studio-slider:hover::-webkit-slider-thumb {
+  transform: scale(1.14);
+  background: #fbbf24;
+}
+
+input[type="range"].studio-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+input[type="range"].studio-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #232938;
+}
+
+input[type="range"].studio-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #0b0d12;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.45);
+}
+
+/* Custom subtle scrollbars for studio panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e1118;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242b3b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #364056;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Chordverse",
+  "description": "Explore chord progressions as an interactive harmonic multiverse with real-time generative synthesis, polyrhythmic patterns, key modulation, song structures, and DAW-ready MIDI export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
